@@ -8,8 +8,12 @@
 /* Colors */
 :root {
   --color-default: #2b180d;
-  --color-primary: #1d1f1f;
-  --color-secondary: #adf0d1;
+  --color-primary: #9a7cf8;
+  --color-secondary: #60b478;
+  --color-titery:#302e35;
+  --color-text-black:#100f11;
+  --color-text-white:#fffdfa;
+  
 }
 
 /* Smooth scroll behavior */
@@ -124,7 +128,7 @@ section {
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color: #fff;
+    color:var(--color-primary);
   }
 
   .navbar .dropdown ul {
@@ -206,7 +210,7 @@ section {
 .hero {
   width: 100%;
   min-height: 100vh;
-  background: url("url") top center;
+  background: url("../img/hero.jpg") top center;
   background-size: cover;
   position: relative;
   padding: 120px 0;
@@ -218,7 +222,7 @@ section {
     position: absolute;
     content: "";
     width: 40%;
-    background: var(--color-secondary);
+    background: var(--color-text-black);
     top: 0;
     bottom: 0;
   }
@@ -252,12 +256,12 @@ section {
   font-size: 48px;
   font-weight: 700;
   line-height: 1.2;
-  color: var(--color-primary);
+  color: var(--color-secondary);
   font-family: var(--font-secondary);
 }
 
 .hero blockquote {
-  color: var(--color-primary);
+  color: var(--color-text-white);
   padding-left: 20px;
   font-size: 15px;
   font-family: var(--font-default);
@@ -274,12 +278,13 @@ section {
   padding: 12px 30px;
   border-radius: 50px;
   transition: 0.5s;
-  color: #fff;
-  background: var(--color-primary);
+  color: var(--color-text-black);
+  background: var(--color-secondary);
 }
 
 .hero .btn-get-started:hover {
-  background: rgba(86, 184, 230, 0.8);
+  background: rgba(22, 60, 78, 0.8);
+  color: var(--color-text-white);
 }
 
 .hero .btn-watch-video {
@@ -325,36 +330,36 @@ section {
 # section2
 --------------------------------------------------------------*/
 .counts {
-  background:green center center no-repeat;
+  background:var(--color-text-white) center center no-repeat;
   background-size: cover;
   padding: 80px 0 60px 0;
   position: relative;
-  background-color: var(--color-secondary);
+
 }
 
 .counts::before {
   content: "";
   position: absolute;
-  background: rgba(17, 17, 17, 0.9);
+  background: var(--color-text-black);
+  opacity: 50%;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
 }
 
-.counts .title {
+.counts h2 {
   position: relative;
-  color: #fff;
+  color:var(--color-text-black);
   margin-bottom: 40px;
 }
 
-.counts .title h3 {
-  font-size: 36px;
-  font-weight: 700;
-  color: white;
+.counts p {
+color: var(--color-text-black);
+
 }
 .counter-number{
-  color: white;
+  color: var(--color-titery);
 }
 .counts .counters span {
   font-size: 48px;
@@ -479,43 +484,28 @@ figure img{
 }
 
 /* section4 */
-.section-services .single-service {
-	margin-top: 40px;
-	background: linear-gradient(rgba(27, 47, 69, 0.8), rgba(27, 47, 69, 0.8));
-	box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+.position-relative{
+  width: 100%;
 }
-
-.section-services .single-service .part-1 {
-	padding: 40px 40px 25px;
-	border-bottom: 2px solid var(--color-secondary);
+.service-content{
+  background-color: var(--color-text-white);
+  opacity: 50%;
+  width: 100%;
+  border-radius: 5% var(--color-secondary);
 }
-
-.section-services .single-service .part-1 i {
-	margin-bottom: 25px;
-	font-size: 50px;
-	color: var(--color-secondary);
+.service-content:hover{
+  background-color: var(--color-text-white);
+  opacity: 50%;
+  width: 100%;
+  border-radius: 5% var(--color-secondary);
 }
+.service-content h3 {
+  color: var(--color-text-black);
 
-.section-services .single-service .part-1 .title {
-	font-size: 17px;
-	font-weight: 700;
-	letter-spacing: 0.02em;
-	line-height: 1.8em;
-  color: whitesmoke;
 }
-
-.section-services .single-service .part-2 {
-	padding: 30px 40px 40px;
+.service-content p{
+  color: var(--color-text-black);
 }
-
-.section-services .single-service .part-2 .description {
-	margin-bottom: 22px;
-	color:  whitesmoke;
-	font-size: 14px;
-	line-height: 1.8em;
-}
-
-
 /*--------------------------------------------------------------
 # Scroll top button
 --------------------------------------------------------------*/
@@ -565,7 +555,7 @@ figure img{
   transition: all 0.5s;
   z-index: 997;
   padding: 24px 0;
-  background-color: var(--color-secondary);
+  background-color: var(--color-titery);
 }
 
 @media (max-width: 1200px) {
@@ -587,7 +577,7 @@ figure img{
 .header .logo h1 {
   font-size: 30px;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-secondary);
   font-family: var(--font-secondary);
   margin: 0;
 }
@@ -631,7 +621,7 @@ figure img{
     font-family: var(--font-default);
     font-size: 15px;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.7);
+    color: blue;
     white-space: nowrap;
     transition: 0.3s;
   }
@@ -797,7 +787,7 @@ figure img{
 }
 
 .footer .footer-content {
-  background-color: #f7f9fc;
+  background-color: var(--color-text-white);
   background-size: contain;
   padding: 60px 0 30px 0;
 }
@@ -829,7 +819,7 @@ figure img{
   font-size: 15px;
   margin-bottom: 0;
   font-family: var(--font-primary);
-  color: var(--color-primary);
+  color: var(--color-titery);
 }
 
 .footer .footer-content .social-links a {
@@ -844,19 +834,19 @@ figure img{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
   color: #fff;
   border-radius: 50px;
 }
 
 .footer .footer-content .social-links a:hover {
-  background-color: #38618e;
+  background-color: var(--color-primary);
 }
 
 .footer .footer-content h4 {
   font-size: 16px;
   font-weight: bold;
-  color: #29486a;
+  color: var(--color-text-black);
   position: relative;
   padding-bottom: 12px;
 }
@@ -873,7 +863,7 @@ figure img{
 
 .footer .footer-content .footer-links ul i {
   margin-right: 2px;
-  color: var(--color-primary);
+  color: var(--color-secondary);
   font-size: 16px;
   line-height: 0;
 }
@@ -889,7 +879,7 @@ figure img{
 }
 
 .footer .footer-content .footer-links ul a {
-  color: #31547c;
+  color: var(--color-titery);
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
@@ -905,18 +895,18 @@ figure img{
 }
 
 .footer .footer-legal {
-  background: #76828F;
+  background: var(--color-text-black);
   padding: 30px 0;
 }
 
 .footer .footer-legal .copyright {
-  text-align:start;
+  text-align:center;
   color: var(--color-primary);
 }
 
 .footer .footer-legal .credits {
-  padding-top: 4px;
-  text-align: end;
+ 
+  text-align: center;
   font-size: 13px;
   color: var(--color-primary);
 }
@@ -984,6 +974,7 @@ figure img{
 /* service */
 .services .img {
   border-radius: 8px;
+  height: 400px;
   overflow: hidden;
 }
 
@@ -1056,9 +1047,9 @@ figure img{
 
 /* Contact */
 .contact .info-box {
-  color: #444444;
+  color: var(--color-titery);
   text-align: center;
-  box-shadow: 0 0 30px rgba(214, 215, 216, 0.3);
+  box-shadow: 0 0 15px var(--color-titery);
   padding: 20px 0 30px 0;
 }
 
@@ -1067,12 +1058,12 @@ figure img{
   color: #106eea;
   border-radius: 50%;
   padding: 8px;
-  border: 2px dotted #b3d1fa;
+  border: 2px dotted var(--color-primary);
 }
 
 .contact .info-box h3 {
   font-size: 20px;
-  color: #777777;
+  color: var(--color-secondary);
   font-weight: 700;
   margin: 10px 0;
 }
@@ -1084,12 +1075,12 @@ figure img{
   margin-bottom: 0;
 }
 
-.contact .php-email-form {
+.contact .email-form {
   box-shadow: 0 0 30px rgba(214, 215, 216, 0.4);
   padding: 30px;
 }
 
-.contact .php-email-form .error-message {
+.contact .email-form .error-message {
   display: none;
   color: #fff;
   background: #ed3c0d;
@@ -1098,11 +1089,11 @@ figure img{
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .email-form .error-message br+br {
   margin-top: 25px;
 }
 
-.contact .php-email-form .sent-message {
+.contact .email-form .sent-message {
   display: none;
   color: #fff;
   background: #18d26e;
@@ -1111,14 +1102,14 @@ figure img{
   font-weight: 600;
 }
 
-.contact .php-email-form .loading {
+.contact .email-form .loading {
   display: none;
   background: #fff;
   text-align: center;
   padding: 15px;
 }
 
-.contact .php-email-form .loading:before {
+.contact .email-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -1131,31 +1122,31 @@ figure img{
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form .form-group {
+.contact .email-form .form-group {
   margin-bottom: 20px;
 }
 
-.contact .php-email-form input,
-.contact .php-email-form textarea {
+.contact .email-form input,
+.contact .email-form textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
 }
 
-.contact .php-email-form input:focus,
-.contact .php-email-form textarea:focus {
+.contact .email-form input:focus,
+.contact .email-form textarea:focus {
   border-color: #106eea;
 }
 
-.contact .php-email-form input {
+.contact .email-form input {
   padding: 10px 15px;
 }
 
-.contact .php-email-form textarea {
+.contact .email-form textarea {
   padding: 12px 15px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .email-form button[type=submit] {
   background: var(--color-primary);
   border: 0;
   padding: 10px 30px;
@@ -1164,8 +1155,8 @@ figure img{
   border-radius: 4px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
-  background: var(--color-primary);
+.contact .email-form button[type=submit]:hover {
+  background: var(--color-secondary);
   opacity: 75%;
 }
 
@@ -1187,4 +1178,49 @@ figure img{
   100% {
     transform: rotate(360deg);
   }
+}
+
+
+
+
+/* gallery */
+.nav-tab{
+  text-align: center;
+  
+}
+.nav-tab a{
+  text-align: center;
+  color: var(--color-secondary);
+  
+}
+.nav-tab a:hover{
+  text-align: center;
+  color: var(--color-primary);
+  
+}
+
+
+.gallery-img{
+  padding: 10px;
+
+}
+.gallery-video{
+  padding: 10px;
+}
+/*service  */
+
+.service-content {
+ 
+  text-align: center;
+  box-shadow: 0 0 15px var(--color-text-black);
+  padding: 20px 0 30px 0;
+  height: 200px;
+  border-radius: 2%;
+
+}
+.service-content h3{
+  font-size: 24px;
+  color: var(--color-primary);
+  font-weight: 700;
+  margin: 10px 0;
 }
