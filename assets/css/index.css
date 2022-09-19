@@ -267,6 +267,8 @@ section {
   font-family: var(--font-default);
   border-left: 2px solid var(--color-primary);
   margin: 40px 0;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .hero .btn-get-started {
@@ -356,6 +358,8 @@ section {
 
 .counts p {
 color: var(--color-text-black);
+text-align: justify;
+  text-justify: inter-word;
 
 }
 .counter-number{
@@ -458,6 +462,10 @@ color: var(--color-text-black);
   font-weight: 700;
   color: var(--color-secondary);
 }
+.about .tab-content p{
+  text-align: justify;
+  text-justify: inter-word;
+}
 
 .about .tab-content i {
   font-size: 22px;
@@ -525,13 +533,17 @@ figure img{
 
 .scroll-top i {
   font-size: 24px;
-  color: #fff;
+  color: var(--color-text-white);
   line-height: 0;
 }
-
+.scroll-top :hover {
+  font-size: 24px;
+  color: var(--color-text-black);
+  line-height: 0;
+}
 .scroll-top:hover {
-  background: rgba(86, 184, 230, 0.8);
-  color: #fff;
+  background: var(--color-secondary);
+  color: var(--color-text-black);
 }
 
 .scroll-top.active {
@@ -724,7 +736,10 @@ figure img{
   color: #29486a;
   font-family: var(--font-secondary);
 }
-
+.why-us .item p{
+  text-align: justify;
+  text-justify: inter-word;
+}
 .why-us .swiper {
   margin: 140px 140px 120px 140px;
   overflow: hidden;
@@ -820,6 +835,8 @@ figure img{
   margin-bottom: 0;
   font-family: var(--font-primary);
   color: var(--color-titery);
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .footer .footer-content .social-links a {
@@ -835,12 +852,14 @@ figure img{
   justify-content: center;
   align-items: center;
   background-color: var(--color-secondary);
-  color: #fff;
+  color: var(--color-text-black);
   border-radius: 50px;
 }
 
 .footer .footer-content .social-links a:hover {
   background-color: var(--color-primary);
+  color:var(--color-text-white);
+  
 }
 
 .footer .footer-content h4 {
@@ -1150,13 +1169,14 @@ figure img{
   background: var(--color-primary);
   border: 0;
   padding: 10px 30px;
-  color: #fff;
+  color: var(--color-text-white);
   transition: 0.4s;
   border-radius: 4px;
 }
 
 .contact .email-form button[type=submit]:hover {
   background: var(--color-secondary);
+  color: var(--color-text-black);
   opacity: 75%;
 }
 
@@ -1223,4 +1243,10 @@ figure img{
   color: var(--color-primary);
   font-weight: 700;
   margin: 10px 0;
+}
+.service-content p{
+  margin: 10px;
+ 
+  text-align: justify;
+  text-justify: inter-word;
 }
